@@ -15,10 +15,14 @@ public class HealthHandler implements HttpRequestHandler {
 
 	private static Map<String, Object> RESPONSE = new HashMap<>();
 
+	static {
+		RESPONSE.put("status", "ok");
+	}
+
 	@Override
 	public void handleGetRequest(HttpExchange exchange) throws HttpRequestException {
 		try {
-			RESPONSE.put("status", "ok");
+
 			String json = JsonUtil.marshal(RESPONSE);
 			HttpResponseUtil.sendResponse(exchange, HttpStatus.OK, json, HttpContentType.JSON);
 		} catch (Exception e) {
