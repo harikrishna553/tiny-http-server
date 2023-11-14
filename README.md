@@ -9,8 +9,11 @@ Go to http-server-demo project, run com.sample.app.App class.
 ## Test the applicaiton.
 ### Get APIs
 http://127.0.0.1:8080/v1/employees
+
 http://127.0.0.1:8080/v1/employees/by-city/Chennai
+
 http://127.0.0.1:8080/health
+
 
 # POST API
 curl --location --request POST 'http://127.0.0.1:8080/v1/employees' \
